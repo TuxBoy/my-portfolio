@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import SectionTitle from "@/app/components/SectionTitle";
 import ProjectCard from "@/app/components/ProjectCard";
+import ProjectsPage from "@/app/components/ProjectsPage";
 
 export default function Home() {
   return (
@@ -14,37 +14,7 @@ export default function Home() {
           <section id="projects" className="px-4 lg:px-20 mt-20">
               <SectionTitle>Mes Projets</SectionTitle>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <ProjectCard
-                      title="BookTech"
-                      description="Application web permettant de gérer sa bibliothèque personnelle, basée sur React, Symfony & API Platform."
-                      tech={["React", "TypeScript", "API Platform", "Symfony", "JWT", "Tailwind"]}
-                      github="https://github.com/TuxBoy/book-manager"
-                      tags={["personal", "Open source"]}
-                  />
-
-                  <ProjectCard
-                      title="PowerLinks"
-                      description="Application web permettant de gérer sa liste de liens autour de la veille."
-                      tech={["Next.js", "Recharts", "Tailwind", "API REST"]}
-                      github="https://github.com/TuxBoy/PowerLinks"
-                      tags={['personal', 'Open source']}
-                  />
-
-                  <ProjectCard
-                      title="Alstom"
-                      description="Evolutions et maintenant du E-commerce Alstom."
-                      tech={["Symfony 4", "Api platform 3", "VueJs"]}
-                      demo="https://www.alstom.com"
-                      tags={['pro']}
-                  />
-
-                  <ProjectCard
-                      title="Movie Finder"
-                      description="Moteur de recherche de films avec API externe, composants réutilisables et système de favoris."
-                      tech={["React", "TMDB API", "Tailwind"]}
-                  />
-              </div>
+              <ProjectsPage />
           </section>
 
           {/* About */}

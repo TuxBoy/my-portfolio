@@ -16,6 +16,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ title, description, image, tech, github, demo, tags = [] }: ProjectCardProps) {
     const fallbackImage = "/default-project.png";
     const projectImage = image && image.trim() !== "" ? image : fallbackImage;
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
