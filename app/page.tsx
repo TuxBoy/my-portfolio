@@ -18,31 +18,21 @@ export default function Home() {
                   <ProjectCard
                       title="BookTech"
                       description="Application web permettant de gérer sa bibliothèque personnelle, basée sur React, Symfony & API Platform."
-                      image="/projects/booktech.jpg"
                       tech={["React", "TypeScript", "API Platform", "Symfony", "JWT", "Tailwind"]}
-                      github="https://github.com/ton-projet"
-                      demo="#"
+                      github="https://github.com/TuxBoy/book-manager"
                   />
 
                   <ProjectCard
-                      title="Dashboard Analytics"
-                      description="Dashboard moderne avec graphiques interactifs, authentification JWT et layout responsive."
-                      image="/projects/dashboard.jpg"
+                      title="PowerLinks"
+                      description="Application web permettant de gérer sa liste de liens autour de la veille."
                       tech={["Next.js", "Recharts", "Tailwind", "API REST"]}
+                      github="https://github.com/TuxBoy/PowerLinks"
                   />
 
                   <ProjectCard
                       title="Movie Finder"
                       description="Moteur de recherche de films avec API externe, composants réutilisables et système de favoris."
-                      image="/projects/movie.jpg"
                       tech={["React", "TMDB API", "Tailwind"]}
-                  />
-
-                  <ProjectCard
-                      title="Chat Real-Time"
-                      description="Application de messagerie temps réel avec WebSocket & notifications."
-                      image="/projects/chat.jpg"
-                      tech={["Node.js", "WebSocket", "React", "Redis"]}
                   />
               </div>
           </section>

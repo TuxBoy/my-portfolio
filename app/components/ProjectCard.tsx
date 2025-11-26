@@ -1,17 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface ProjectCardProps {
     title: string;
     description: string;
-    image: string;
+    image?: string | null;
     tech: string[];
     github?: string;
     demo?: string;
 }
 
 export default function ProjectCard({ title, description, image, tech, github, demo }: ProjectCardProps) {
+    const fallbackImage = "/default-project.png";
+    const projectImage = image && image.trim() !== "" ? image : fallbackImage;
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -20,7 +23,15 @@ export default function ProjectCard({ title, description, image, tech, github, d
             viewport={{ once: true }}
             className="bg-gray-900 border border-gray-800 rounded-xl p-4 shadow-lg"
         >
-            <img src={image} alt={title} className="rounded-lg mb-4" />
+            <figure className="h-48 w-full overflow-hidden">
+                <Image
+                    src={projectImage}
+                    alt={title}
+                    width={500}
+                    height={300}
+                    className="object-cover w-full h-full"
+                />
+            </figure>
 
             <h3 className="text-xl text-white font-semibold">{title}</h3>
             <p className="text-gray-400 mt-2">{description}</p>
