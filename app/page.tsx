@@ -20,6 +20,7 @@ export default function Home() {
                       description="Application web permettant de gérer sa bibliothèque personnelle, basée sur React, Symfony & API Platform."
                       tech={["React", "TypeScript", "API Platform", "Symfony", "JWT", "Tailwind"]}
                       github="https://github.com/TuxBoy/book-manager"
+                      tags={["personal", "Open source"]}
                   />
 
                   <ProjectCard
@@ -27,6 +28,15 @@ export default function Home() {
                       description="Application web permettant de gérer sa liste de liens autour de la veille."
                       tech={["Next.js", "Recharts", "Tailwind", "API REST"]}
                       github="https://github.com/TuxBoy/PowerLinks"
+                      tags={['personal', 'Open source']}
+                  />
+
+                  <ProjectCard
+                      title="Alstom"
+                      description="Evolutions et maintenant du E-commerce Alstom."
+                      tech={["Symfony 4", "Api platform 3", "VueJs"]}
+                      demo="https://www.alstom.com"
+                      tags={['pro']}
                   />
 
                   <ProjectCard

@@ -8,11 +8,12 @@ interface ProjectCardProps {
     description: string;
     image?: string | null;
     tech: string[];
+    tags: string[];
     github?: string;
     demo?: string;
 }
 
-export default function ProjectCard({ title, description, image, tech, github, demo }: ProjectCardProps) {
+export default function ProjectCard({ title, description, image, tech, github, demo, tags = [] }: ProjectCardProps) {
     const fallbackImage = "/default-project.png";
     const projectImage = image && image.trim() !== "" ? image : fallbackImage;
     return (
@@ -23,6 +24,7 @@ export default function ProjectCard({ title, description, image, tech, github, d
             viewport={{ once: true }}
             className="bg-gray-900 border border-gray-800 rounded-xl p-4 shadow-lg"
         >
+
             <figure className="h-48 w-full overflow-hidden">
                 <Image
                     src={projectImage}
@@ -35,6 +37,21 @@ export default function ProjectCard({ title, description, image, tech, github, d
 
             <h3 className="text-xl text-white font-semibold">{title}</h3>
             <p className="text-gray-400 mt-2">{description}</p>
+            {/* TAGS */}
+            <div className="flex flex-wrap gap-2 mt-3">
+                {tags.map((tag, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.1, type: "spring", stiffness: 300 }}
+                        whileHover={{ scale: 1.1, backgroundColor: "#6366F1", color: "#fff" }}
+                        className="px-3 py-1 text-xs rounded-full border border-indigo-400 text-indigo-400 cursor-pointer"
+                    >
+                        {tag.toUpperCase()}
+                    </motion.div>
+                ))}
+            </div>
 
             <div className="flex flex-wrap gap-2 mt-4">
                 {tech.map((t) => (
