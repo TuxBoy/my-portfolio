@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import {useEffect, useState} from "react";
 import ProjectCard from "@/app/components/ProjectCard";

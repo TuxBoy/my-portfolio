@@ -9,7 +9,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="flex justify-between items-center py-6 px-4 lg:px-20 text-gray-300"
         >
-            <h1 className="text-xl font-bold text-white">Benoît Mallo</h1>
+            <h1 className="text-xl font-bold text-white"><a href="/">Benoît Mallo</a></h1>
 
             <div className="flex gap-6">
                 <a href="#projects" className="hover:text-white transition">Projets</a>

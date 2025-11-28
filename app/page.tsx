@@ -1,16 +1,14 @@
-import Navbar from "@/app/components/Navbar";
+'use client'
+
 import Hero from "@/app/components/Hero";
 import SectionTitle from "@/app/components/SectionTitle";
-import ProjectCard from "@/app/components/ProjectCard";
 import ProjectsPage from "@/app/components/ProjectsPage";
 
 export default function Home() {
   return (
       <main>
-          <Navbar />
           <Hero />
 
-          {/* Projects */}
           <section id="projects" className="px-4 lg:px-20 mt-20">
               <SectionTitle>Mes Projets</SectionTitle>
 

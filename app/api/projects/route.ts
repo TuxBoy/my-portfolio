@@ -2,14 +2,13 @@ import path from "node:path";
 import * as fs from "node:fs";
 import {NextRequest, NextResponse} from "next/server";
 
-const DATA_FILE = path.join(process.cwd(), "projects.json")
+const DATA_FILE = path.join(process.cwd(), "/data/projects.json")
 
 export async function GET(): Promise<NextResponse> {
     if (!fs.existsSync(DATA_FILE)) {
         fs.writeFileSync(DATA_FILE, JSON.stringify([]))
     }
 
-    console.log(DATA_FILE)
     const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf8"))
     return NextResponse.json(data)
 }
